@@ -1,0 +1,108 @@
+/* ============================
+   CSS explicado linha por linha
+   Projeto: portfólio simples
+   ============================ */
+
+/* ===== Estilo base do documento ===== */
+body {
+    /* cor do texto principal (tudo dentro do body, salvo sobrescritas) */
+    color: white;
+
+    /* cor de fundo da página inteira */
+    background-color: black;
+
+    /* família de fontes usada por todo o site (fallback: se Arial não existir, tenta Helvetica, depois sans-serif genérico) */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Estilo para listas não ordenadas (provavelmente usado como menu) ===== */
+ul {
+    /* transforma a lista em um container flexível para alinhar os itens em linha */
+    display: flex;
+
+    /* distribui os itens igualmente ao longo da linha, com espaço entre eles */
+    justify-content: space-around;
+
+    /* remove os marcadores (bolinhas) padrão das listas */
+    list-style-type: none;
+
+    /* alinha verticalmente os itens ao centro dentro da barra (útil quando itens têm alturas diferentes) */
+    align-items: center;
+
+    /* espaço interno da lista — cria “acolchoamento” ao redor dos itens */
+    padding: 16px;
+}
+
+/* ===== Links (âncoras) ===== */
+a {
+    /* cor do texto dos links (herda do body, mas reafirma branco) */
+    color: white;
+
+    /* remove o sublinhado padrão dos links */
+    text-decoration: none;
+}
+
+/* ===== Imagens - regras gerais ===== */
+img {
+    /* largura fixa da imagem */
+    width: 150px;
+
+    /* altura fixa da imagem */
+    height: 150px;
+
+    /* cantos arredondados de 50px (cria bordas curvas) */
+    border-radius: 50px;
+
+    /* borda verde de 5px ao redor da imagem */
+    border: 5px solid #5BBE42;
+}
+
+/* ===== Imagem dentro do header (ex.: logo / avatar) ===== */
+header img {
+    /* garante largura/altura para imagens no cabeçalho */
+    width: 150px;
+    height: 150px;
+
+    /* borda totalmente circular (50% do menor lado -> círculo perfeito quando largura == altura) */
+    border-radius: 50%;
+
+    /* mesma borda verde de 5px */
+    border: 5px solid #5BBE42;
+}
+
+/* ===== Imagens dentro do footer ===== */
+footer img {
+    /* imagens menores no rodapé */
+    width: 40px;
+    height: 40px;
+}
+
+/* ===== Rodapé (footer) ===== */
+footer {
+    /* usa flexbox para alinhar conteúdo do footer em linha e centralizá-lo horizontalmente */
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Link do footer (vazio no original — aqui só aparece por completude) ===== */
+footer a {
+
+}
+
+/* ===== Parágrafo dentro do footer ===== */
+footer p {
+    /* pequeno recuo superior (afasta o parágrafo do elemento acima) */
+    margin-top: 2px;
+}
+
+/* ===== Container geral usado para espaçamento horizontal do conteúdo ===== */
+.container {
+    /* padding: topo/baixo 0px, esquerda/direita 50px */
+    padding: 0px 50px;
+}
+
+/* ===== Efeito hover nos links dentro do nav ===== */
+nav a:hover {
+    /* muda a cor quando o mouse passa por cima do link */
+    color: #5BBE42;
+}
