@@ -52,10 +52,14 @@ img {
     height: 150px;
 
     /* cantos arredondados */
-    border-radius: 50px;
+    border-radius: 50%;
 
     /* borda verde de 5px ao redor da imagem */
     border: 5px solid #5BBE42;
+}
+
+header {
+    text-align: center;
 }
 
 /* ===== Imagem dentro do header ===== */
