@@ -1,5 +1,4 @@
 /* ============================
-   CSS explicado linha por linha
    Projeto: portfólio simples
    ============================ */
 
@@ -15,9 +14,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===== Estilo para listas não ordenadas (provavelmente usado como menu) ===== */
+/* ===== Estilo para listas não ordenadas (menu) ===== */
 ul {
     /* transforma a lista em um container flexível para alinhar os itens em linha */
+    /* transforma o elemento numa esteira, um trilho, "correia transportadora" */
+    /* Pode mover para os lados, enfileirar e espaçar */
     display: flex;
 
     /* distribui os itens igualmente ao longo da linha, com espaço entre eles */
@@ -26,19 +27,19 @@ ul {
     /* remove os marcadores (bolinhas) padrão das listas */
     list-style-type: none;
 
-    /* alinha verticalmente os itens ao centro dentro da barra (útil quando itens têm alturas diferentes) */
+    /* alinha verticalmente os itens ao centro dentro da barra */
     align-items: center;
 
-    /* espaço interno da lista — cria “acolchoamento” ao redor dos itens */
+    /* espaço interno da lista, “acolchoamento” ao redor dos itens */
     padding: 16px;
 }
 
 /* ===== Links (âncoras) ===== */
 a {
-    /* cor do texto dos links (herda do body, mas reafirma branco) */
+    /* cor do texto dos links */
     color: white;
 
-    /* remove o sublinhado padrão dos links */
+    /* remove o sublinhado */
     text-decoration: none;
 }
 
@@ -50,14 +51,14 @@ img {
     /* altura fixa da imagem */
     height: 150px;
 
-    /* cantos arredondados de 50px (cria bordas curvas) */
+    /* cantos arredondados */
     border-radius: 50px;
 
     /* borda verde de 5px ao redor da imagem */
     border: 5px solid #5BBE42;
 }
 
-/* ===== Imagem dentro do header (ex.: logo / avatar) ===== */
+/* ===== Imagem dentro do header ===== */
 header img {
     /* garante largura/altura para imagens no cabeçalho */
     width: 150px;
@@ -84,7 +85,7 @@ footer {
     justify-content: center;
 }
 
-/* ===== Link do footer (vazio no original — aqui só aparece por completude) ===== */
+/* ===== Link do footer (vazio por enquanto) ===== */
 footer a {
 
 }
