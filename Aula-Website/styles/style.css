@@ -1,0 +1,66 @@
+/* 
+Cores
+#FFFFFF 
+
+
+
+
+
+
+
+
+
+
+
+font-family: 'Caveat', cursive;
+font-family: 'EB Garamond', serif;
+font-family: 'Marhey', cursive;
+font-family: 'Mynerve', cursive;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* ------------------------------------------------------
+   Reset básico para todos os elementos -> deixa tudo limpo
+   ------------------------------------------------------ */
+   *{
+    /* Remove o espaço interno padrão que navegadores colocam nos elementos */
+    padding: 0;
+
+    /* Remove a margem externa padrão dos elementos (ex.: <body>, <h1>, <p>) */
+    margin: 0;
+
+    /* Faz com que largura/altura incluam borda e padding no cálculo.
+       Evita surpresas ao dimensionar caixas. */
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------
+   Estilo do header (seção de capa / "hero") 
+   ------------------------------------------------------ */
+header{
+    /* Limite do header, não ultrapassa 100% da largura da tela */
+    max-width: 100%;
+
+    /* Faz o header ter 90% da altura da janela do navegador (90 viewport height) */
+    height: 90vh;
+
+    /* Define fundo com dois itens:
+       1) um gradiente semi-transparente para escurecer ou suavizar a imagem
+       2) a própria imagem de capa (headerCapa.png)
+       A vírgula separa camadas: a primeira fica sobre a segunda */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url('../images/headerCapa.png');
+
+    /* Impede que a imagem de fundo "se repita" como azulejos */
+    background-repeat: no-repeat;
+
+    /* Centraliza a imagem no eixo horizontal e vertical */
+    background-position: center center;
+
+    /* Faz a imagem cobrir toda a área do header, cortando o que excede.
+       Mantém proporção da imagem. */
+    background-size: cover;
+
+    /* Permite posicionar elementos filhos do header com position:absolute
+       relativo a este header (serve de referência). */
+    position: relative;
+}
