@@ -1,0 +1,119 @@
+/*
+CORES
+.
+.
+.
+.
+.
+
+FONTES
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+*/
+
+/* ============================
+            Reset 
+   ============================ */
+   *{
+    /* Remove margens/paddings padrão dos navegadores.
+    limpar a mesa antes. */
+    margin: 0;
+    padding: 0;
+
+    /* Faz com que width/height incluam borda e padding no cálculo.
+       usar uma régua que já considera a moldura e o forro da caixa. */
+    box-sizing: border-box;
+}
+
+
+/* ============================
+   HEADER - topo da página
+   ============================ */
+
+/* cabeçalho ocupando a largura total e quase a altura inteira da tela */
+header{
+    width: 100%;        /* ocupa toda a largura disponível */
+    height: 95vh;       /* altura: 95% da altura da janela (vh = viewport height) */
+}
+
+
+/* ============================
+   NAVBAR dentro do header
+   ============================ */
+
+/* Seleciona <nav id="nav-esq"> dentro do header */
+header nav#nav-esq{
+    width: 100%;           /* barra ocupa toda a largura */
+    height: 150px;         /* altura fixa da barra (a "prateleira" do topo) */
+    background-color: #260101; /* cor de fundo */
+
+    /* Ativa layout flexível (linha) para alinhar logo, ícones e menu em uma esteira */
+    display: flex;
+    flex-flow: row;        /* organiza itens em linha (row) */
+    align-items: center;   /* alinha verticalmente os itens ao centro da "prateleira" */
+}
+
+/* ===== logo container ===== */
+header nav#nav-esq div#logo{
+    width: 200px;      /* largura fixa para o bloco do logo */
+    height: 120px;     /* altura fixa do bloco do logo */
+    margin-left: 5rem; /* recuo da esquerda (empurra o logo pra dentro da tela) */
+}
+
+/* Faz com que a imagem ocupe todo o espaço do bloco do logo */
+header nav#nav-esq div#logo img{
+    width: 100%;       /* imagem preenche largura do container */
+    height: 100%;      /* imagem preenche altura do container */
+}
+
+
+/* ============================
+   Ícone do menu hambúrguer
+   ============================ */
+
+/* Este UL contém os ícones de menu/close (comentado display none por enquanto) */
+header nav#nav-esq ul#icone-menu{
+    /* display: none;*/ /* --> pode ser usado para esconder o ícone em desktop */
+}
+
+/* Itens da lista (remove marcador) */
+header nav#nav-esq ul#icone-menu li{
+    list-style: none;
+}
+
+/* Estilo no componente de ícone (ion-icon) */
+header nav#nav-esq ul#icone-menu li ion-icon{
+    font-size: 50px;   /* tamanho grande para o ícone (visível) */
+    color: #FFF;       /* cor branca */
+    margin-right: 2rem;/* espaço para a direita entre ícones/itens */
+}
+
+
+/* ============================
+   Menu principal (links)
+   ============================ */
+
+/* UL do menu principal (links de navegação) */
+header nav#nav-esq ul#menu-principal{
+    margin-left: 5rem;           /* recua o menu da esquerda (afastando do logo) */
+
+    display: flex;               /* transforma a lista em linha (flex) */
+    flex-flow: row wrap;         /* os itens ficam em linha e podem quebrar para nova linha se necessário */
+}
+
+/* Links dentro do menu principal */
+header nav#nav-esq ul#menu-principal li a{
+    text-decoration: none;       /* remove sublinhado do link */
+    color: #FFF;                 /* cor branca dos links */
+    font-size: 100%;             /* tamanho da fonte (100% = herda do elemento pai) */
+    text-shadow: 4px 6px 10px #000; /* sombra no texto para destacá-lo sobre fundo escuro */
+    padding-bottom: 10px;        /* espaço inferior para criar área de clique/estética */
+    transition: .3 ease-out;     /* TRANSIÇÃO: cuidado! falta a unidade 's' -> deveria ser '0.3s ease-out' */
+}
+
+/* Efeito quando o mouse passa por cima do link */
+header nav#nav-esq ul#menu-principal li a:hover{
+    border-bottom: 1px solid #FFF; /* underlined via borda inferior */
+    opacity: .6;                   /* leve transparência ao passar o mouse */
+}

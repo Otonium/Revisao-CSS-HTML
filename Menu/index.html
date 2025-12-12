@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compatibilidade com versões antigas do IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ajusta escala em celulares -->
+
+    <!-- ===== Estilos externos (CSS) ===== -->
+    <!-- Biblioteca de animações pronta (animate.css) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"   rel="stylesheet">
+
+    <!-- Fontes do Google: carregam estilos de letra -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@300;400;600&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Seus arquivos de estilo locais -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mobile.css">
+    
+    <title>Menu</title> 
+</head>
+<body>
+
+    <!-- ===== Cabeçalho / topo da página ===== -->
+    <header>
+        <!-- nav com id "nav-esq": área do menu à esquerda -->
+        <nav id="nav-esq">
+            <!-- logo: área que mostra uma imagem de marca -->
+            <div id="logo">
+                <img src="images/01-logo.png" alt="logo"> <!-- alt é texto alternativo para acessibilidade -->
+            </div>
+
+            <!-- ícones do menu (ícone de abrir/fechar menu em mobile) -->
+            <ul id="icone-menu">
+                <li id="menu"><ion-icon name="menu-outline"></ion-icon></li>  <!-- ícone "menu" (hamburger) -->
+                <li id="menuX"><ion-icon name="close-outline"></ion-icon></li> <!-- ícone "close" (fechar) -->
+            </ul>
+
+            <!-- menu principal com opções de navegação -->
+            <ul id="menu-principal">
+                <!-- Observação importante: aqui o <a href="#"> está vazio e o texto "Home" está fora da tag.
+                     O correto é colocar o texto dentro do <a>, assim: <li><a href='#'>Home</a></li> -->
+                <li><a href="#"></a>Home</li>
+                <li><a href="#"></a>Sobre</li>
+                <li><a href="#"></a>Serviços</li>
+                <li><a href="#"></a>Blog</li>
+                <li><a href="#"></a>Contato</li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <!-- ===== Scripts no final do body ===== -->
+    <!-- jQuery (biblioteca JS que facilita manipulação do DOM) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Waypoints: biblioteca para detectar quando elementos aparecem na tela -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
+
+    <!-- Atalho sticky do Waypoints para fixar elementos ao rolar a página -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js" integrity="sha512-O5YCLUxCY2OBc4rfpnKUIgE4LGuCiW8CrJ7ty4hvkBAAKUOnlbomEFWd3a6ruRnFvO3LG2wiaGiJ1heOvdppvA==" crossorigin="anonymous"></script>
+    
+    <!-- Seu script local que provavelmente controla o menu e efeitos -->
+    <script src="./scripts/index.js"></script>
+
+    <!-- Ionicons: biblioteca de ícones usada nos <ion-icon> -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</body>
+</html>
